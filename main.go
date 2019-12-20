@@ -8,6 +8,7 @@ import (
 // handlerFunc is a function that's called everytime someone comes to our web app;
 // runs any time a web request hits our server
 func handlerFunc(w http.ResponseWriter, r *http.Request) {
+	w.Header().Set("Content-Type", "text/html")
 	fmt.Fprint(w, "<h1>Welcome to my awesome site!</h1>")
 }
 
